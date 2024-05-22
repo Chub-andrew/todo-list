@@ -19,7 +19,12 @@ class Task(models.Model):
 
 class Tag(models.Model):
     name = models.CharField(max_length=255, unique=True)
-    slug = models.SlugField(max_length=255, null=True, unique=True, blank=False)
+    slug = models.SlugField(
+        max_length=255,
+        null=True,
+        unique=True,
+        blank=False
+    )
 
     class Meta:
         ordering = ("name", )
